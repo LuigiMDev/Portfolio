@@ -26,10 +26,25 @@ const ThemeSwitch = () => {
   if (!mode) return null;
 
   return (
-    <div className={`w-14 h-fit flex justify-between rounded-full bg-background2 relative p-1 before:absolute before:h-5 before:w-5 before:rounded-full before:left-1 ${mode === "light" ? "before:bg-white before:left-[calc(100%-24px)]" : "before:bg-white before:left-1"} before:transition-all before:duration-300`} onClick={(handleSwitchMode)}>    
-      <Moon className={`h-5 w-5 text-black ${mode === "dark" ? "opacity-0" : "opacity-100"} transition-all`} />
-      <Sun className={`h-5 w-5 text-white ${mode === "light" ? "opacity-0" : "opacity-100"} transition-all`} />
-    </div>
+    <button
+      className={`w-14 h-fit flex justify-between rounded-full bg-background2 relative p-1 before:absolute before:h-5 before:w-5 before:rounded-full before:left-1 before:bg-white ${
+        mode === "light"
+          ? "before:left-[calc(100%-24px)]"
+          : "before:left-1"
+      } before:transition-all before:duration-300`}
+      onClick={handleSwitchMode}
+    >
+      <Moon
+        className={`h-5 w-5 text-black ${
+          mode === "dark" ? "opacity-0" : "opacity-100"
+        } transition-all`}
+      />
+      <Sun
+        className={`h-5 w-5 text-white ${
+          mode === "light" ? "opacity-0" : "opacity-100"
+        } transition-all`}
+      />
+    </button>
   );
 };
 
