@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen flex flex-col justify-center items-center">
       <BackgroundVideo />
       <ThemeSwitch />
       <HeroSection />

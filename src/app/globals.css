@@ -8,7 +8,7 @@
 
   --card: hsl(0 0% 100%);
 
-  --primary: hsl(250 47% 60%);
+  --primary: hsl(278, 100%, 75%);
   --primary-foreground: hsl(210 40% 98%);
 
   --border: hsl(214 32% 91%);
@@ -22,7 +22,8 @@
 
   --card: hsl(222 47% 8%);
 
-  --primary: hsl(250 65% 65%);
+  --primary: hsl(278, 100%, 75%);
+
   --primary-foreground: hsl(213 31% 91%);
 
   --border: hsl(217 33% 20%);
@@ -37,9 +38,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-border: var(--border);
 
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: monospace;
 }
 
 @utility text-glow {
@@ -82,3 +81,29 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+@property --GlowSpinAnimation {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.GlowSpin::before, .GlowSpin::after {
+  position: absolute;
+  content: "";
+  inset: -4px;
+  background-image: conic-gradient(from var(--GlowSpinAnimation), transparent 70%, var(--primary));
+  animation:  GlowSpinAnimation 3s infinite linear;
+  z-index: -1;
+  
+}
+
+@keyframes GlowSpinAnimation {
+  from {
+    --GlowSpinAnimation: 0deg;
+  }
+  to {
+    --GlowSpinAnimation: 360deg;
+  }
+}
+
