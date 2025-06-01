@@ -13,7 +13,7 @@ const HeroSection = () => {
             <p className='text-xs lg:text-sm opacity-85 mb-5 text-center lg:text-left'>Desenvolvedor Web com foco em React.js, Next.js, Vite, HTML5, CSS3, Tailwind, JavaScript, Typescript e Node.js, além de conhecimentos em MySQL, C# e versionamento de código com Git/GitHub.</p>
            <ButtonGlow />
         </div>
-        <div className='rounded-full before:rounded-full after:rounded-full after:blur-lg aspect-square relative w-[70%] lg:w-[455px] '>
+        <div className='rounded-full before:rounded-full after:rounded-full after:blur-lg aspect-square relative w-[70%] lg:w-[455px] filter drop-shadow-[0_0_60px_rgba(147,51,234,0.4)]'>
             <Image src="/Luigi_Image.png" className='object-cover' alt='Luigi' fill />
         </div>
     </div>
