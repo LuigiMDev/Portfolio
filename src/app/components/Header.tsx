@@ -18,10 +18,6 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(menuClicked);
-  }, [menuClicked]);
-
   return (
     <header
       className={`fixed inset-x-0 top-0 px-10 py-3 z-50 h-20  flex items-center transition-all border-b ${
