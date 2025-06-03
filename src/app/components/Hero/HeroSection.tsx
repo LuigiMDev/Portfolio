@@ -5,7 +5,7 @@ import { Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between w-full h-[100dvh] items-center px-10 max-w-[1410px] gap-y-6 pb-5 pt-25 lg:pt-5">
+    <section id="init" className="flex flex-col lg:flex-row lg:justify-between w-full h-[100dvh] items-center px-10 max-w-[1410px] gap-y-6 pb-5 pt-25 lg:pt-5">
       <div className="text-white max-w-[500px] flex flex-col items-center lg:items-start">
         <div>
           <span className="text-lg opacity-70 text-center lg:text-left block">
@@ -31,7 +31,7 @@ const HeroSection = () => {
           fill
         />
       </div>
-    </div>
+    </section>
   );
 };
 

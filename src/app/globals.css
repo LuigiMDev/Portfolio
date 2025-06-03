@@ -63,6 +63,18 @@
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
+@utility clip-circle-initial {
+  clip-path: circle(0px at 95% 5%)
+}
+
+@utility clip-circle-final {
+  clip-path: circle(1500px at 95% 25%)
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -70,7 +82,6 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 @property --GlowSpinAnimation {

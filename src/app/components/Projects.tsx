@@ -6,7 +6,7 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = async () => {
   const projects = await getProjects();
   return (
-    <div className="px-3 lg:px-10">
+    <section id="projects" className="px-3 lg:px-10">
       <div className="max-w-[1410px] bg-white/5 backdrop-blur-sm border border-white/10 px-4 md:px-10 py-5 rounded-xl">
         <h2 className="text-5xl font-semibold mb-10 text-center">Projetos</h2>
 
@@ -23,7 +23,7 @@ const Projects = async () => {
               <div className="flex flex-col justify-between flex-grow">
                 <div>
                   <h3 className="text-2xl font-semibold mb-3">{project.name}</h3>
-                  <ul className="flex gap-2 mb-4 flex-wrap">
+                  <ul className="flex gap-2 mb-4 flex-wrap pointer-events-none ">
                     {project.topics?.map((topic) => (
                       <li
                         key={topic}
@@ -40,6 +40,7 @@ const Projects = async () => {
                     href={project.homepage}
                     target="_blank"
                     className="bg-purple-600/50 hover:bg-purple-600 transition-all block p-1 rounded-xl"
+                    aria-label="Link do projeto"
                   >
                     <ExternalLink />
                   </a>
@@ -48,6 +49,7 @@ const Projects = async () => {
                       href={project.github}
                       target="_blank"
                       className="bg-purple-600/50 hover:bg-purple-600 transition-all block p-1 rounded-xl"
+                      aria-label="Link do Github do projeto"
                     >
                       <Github />
                     </a>
@@ -58,7 +60,7 @@ const Projects = async () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
