@@ -1,11 +1,5 @@
-type Project = {
-  id: string;
-  name: string;
-  description: string;
-  homepage: string;
-  topics?: string[];
-  media: string
-};
+import { manualProjects } from "../data/manualProjects";
+import { Project } from "../types/Project";
 
 const verifyHasVideo = async (repoName: string) => {
   const res = await fetch(
@@ -29,9 +23,16 @@ export const getProjects = async () => {
 
   const data = await res.json();
 
-  const projectsData: Project[] = data.filter((project: Project) =>
+  const projectsData: Project[] = data
+  .filter((project: Project) =>
     project.topics?.includes("portfolio")
-  );
+  )
+  .map((project: Project) => (
+    {
+      ...project,
+      topics: project.topics?.filter((topic) => topic !== "portfolio")
+    }
+  ))
 
   const projects = await Promise.all(
     projectsData.map(async (project) => {
@@ -42,12 +43,14 @@ export const getProjects = async () => {
         name: project.name,
         description: project.description,
         homepage: project.homepage,
-        media:
-          hasVideo ?
-          `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/video.gif` : `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/thumb.png`,
+        github: `https://github.com/LuigiMDev/${project.name}`,
+        topics: project.topics || [],
+        media: hasVideo
+          ? `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/video.gif`
+          : `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/thumb.png`,
       };
     })
   );
 
-  return projects;
+  return [...projects, ...manualProjects];
 };

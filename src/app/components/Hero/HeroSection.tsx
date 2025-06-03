@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import ButtonGlow from "./ButtonGlow";
+import { Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -20,6 +21,7 @@ const HeroSection = () => {
           MySQL, C# e versionamento de código com Git/GitHub.
         </p>
         <ButtonGlow />
+        
       </div>
       <div className="rounded-full before:rounded-full after:rounded-full after:blur-lg aspect-square relative w-full lg:w-[455px] max-w-[320px] lg:max-w-[455px] drop-shadow-[0_0_60px_rgba(147,51,234,0.3)]">
         <Image
