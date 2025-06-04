@@ -48,9 +48,14 @@ export const getProjects = async () => {
         media: hasVideo
           ? `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/video.gif`
           : `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/thumb.png`,
+        updated_at: project.updated_at
       };
     })
   );
 
-  return [...projects, ...manualProjects];
+  const allProjects = [...projects, ...manualProjects]
+
+  allProjects.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+
+  return allProjects;
 };
