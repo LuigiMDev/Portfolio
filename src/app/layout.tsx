@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Portfólio Luigi Matheus",
     images: [
       {
-        url: "/og-image.png",
+        url: `${baseURL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Imagem de capa do portfólio de Luigi Matheus"
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Portfólio - Luigi Matheus",
     description:
       "Desenvolvedor fullstack apaixonado por React, Next.js e Node.js. Veja meus projetos e entre em contato!",
-    images: ["/og-image.png"],
+    images: [`${baseURL}/og-image.png`],
   },
   robots: {
     index: true,
