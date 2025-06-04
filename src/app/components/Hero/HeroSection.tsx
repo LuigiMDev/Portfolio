@@ -35,7 +35,7 @@ const HeroSection = () => {
       </div>
       <div className="rounded-full before:rounded-full after:rounded-full after:blur-lg aspect-square relative w-full lg:w-[455px] max-w-[320px] lg:max-w-[455px] drop-shadow-[0_0_60px_rgba(147,51,234,0.3)]">
         <Image
-          src="/Luigi_Image.png"
+          src="/Luigi_image.png"
           className="object-cover"
           alt="Luigi"
           fill
