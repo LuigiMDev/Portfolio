@@ -6,4 +6,5 @@ export type Project = {
   github?: string
   topics?: string[];
   media: string;
+  updated_at: string;
 };
