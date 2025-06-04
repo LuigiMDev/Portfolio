@@ -16,7 +16,7 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row items-center gap-10 mb-16 justify-center">
           <div className="relative w-[220px] h-[220px] rounded-full overflow-hidden shadow-[0_0_60px_rgba(147,51,234,0.3)]">
             <Image
-              src="/Luigi_Image2.png"
+              src="/Luigi_image2.png"
               alt="Luigi Matheus"
               fill
               className="object-cover"

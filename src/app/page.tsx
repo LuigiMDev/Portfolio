@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/Hero/HeroSection";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   return (
