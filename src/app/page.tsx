@@ -12,9 +12,9 @@ export default function Home() {
       <Header />
       <main className="w-full max-w-[1410px] mx-auto">
         <HeroSection />
+        <AboutMe />
         <Projects />
         <Skills />
-        <AboutMe />
       </main>
     </div>
   );

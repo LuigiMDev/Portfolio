@@ -55,10 +55,10 @@ const Header = () => {
                 <a href="#init">Início</a>
               </li>
               <li>
-                <a href="#projects">Projetos</a>
+                <a href="#about-me">Sobre mim</a>
               </li>
               <li>
-                <a href="#about-me">Sobre mim</a>
+                <a href="#projects">Projetos</a>
               </li>
               <li>
                 <a href="#contact">Contato</a>
