@@ -8,7 +8,7 @@ const Projects = async () => {
   return (
     <section id="projects" className="px-3 lg:px-10 mb-10 scroll-mt-20">
       <div className="max-w-[1410px] bg-white/5 backdrop-blur-sm border border-white/10 px-4 md:px-10 py-5 rounded-xl">
-        <h2 className="text-5xl font-semibold mb-5 text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold mb-5 text-center">
           Projetos em <span className="text-purple-500">Destaque</span>
         </h2>
         <p className="mb-10 text-lg text-center max-w-[1000px] mx-auto">
