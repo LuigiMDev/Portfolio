@@ -1,7 +1,3 @@
-Claro! Aqui está uma versão focada em apresentar seu portfólio, suas tecnologias, funcionalidades e propósito, sem instruções de instalação:
-
----
-
 # Portfólio - Luigi Matheus
 
 Este portfólio é uma vitrine profissional que reúne meus principais projetos, habilidades e experiências como desenvolvedor fullstack. Ele foi cuidadosamente desenvolvido para apresentar meu trabalho de forma clara, moderna e acessível, destacando as tecnologias que domino e os projetos que já realizei.
@@ -50,7 +46,3 @@ O objetivo principal deste portfólio é servir como um espaço dinâmico e atua
 * Desenvolvedores e colaboradores que querem explorar meus projetos e habilidades
 * Clientes e parceiros interessados em soluções modernas e eficazes
 * Qualquer pessoa que deseje acompanhar minha evolução e contribuições no mundo tech
-
----
-
-Se desejar, posso ajudar a criar uma versão personalizada para colocar direto no seu site! Quer?
