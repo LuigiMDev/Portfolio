@@ -6,9 +6,10 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = async () => {
   const projects = await getProjects();
   return (
-    <section id="projects" className="px-3 lg:px-10">
+    <section id="projects" className="px-3 lg:px-10 mb-10">
       <div className="max-w-[1410px] bg-white/5 backdrop-blur-sm border border-white/10 px-4 md:px-10 py-5 rounded-xl">
-        <h2 className="text-5xl font-semibold mb-10 text-center">Projetos</h2>
+        <h2 className="text-5xl font-semibold mb-5 text-center">Projetos em <span className="text-purple-500">Destaque</span></h2>
+        <p className="mb-10 text-lg text-center max-w-[1000px] mx-auto">Confira alguns dos meus principais projetos, onde aplico na prática as tecnologias que domino para criar soluções modernas, funcionais e bem estruturadas.</p>
 
         <div className="grid grid-cols-auto-fill gap-10">
           {projects.map((project) => (
@@ -18,7 +19,7 @@ const Projects = async () => {
                 width={300}
                 height={220}
                 alt={project.name}
-                className="mx-auto w-full mb-2 aspect-video object-cover"
+                className="mx-auto w-full mb-2 aspect-video object-cover rounded-md"
               />
               <div className="flex flex-col justify-between flex-grow">
                 <div>

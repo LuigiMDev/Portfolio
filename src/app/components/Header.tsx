@@ -1,5 +1,5 @@
 "use client";
-import { AppWindowMac } from "lucide-react";
+import { AppWindowMac, X } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -31,13 +31,13 @@ const Header = () => {
           <Image src="/LM_logo.png" width={50} height={50} alt="LM" />
         </a>
         <div
-            className={`fixed w-screen h-screen z-10 inset-0 ${
-              menuClicked ? "block" : "hidden"
-            } lg:hidden pointer-events-auto`}
-            onClick={() => {
-              setMenuClicked(false);
-            }}
-          />
+          className={`fixed w-screen h-screen z-10 inset-0 ${
+            menuClicked ? "block" : "hidden"
+          } lg:hidden pointer-events-auto`}
+          onClick={() => {
+            setMenuClicked(false);
+          }}
+        />
         <div
           className="relative group"
           aria-label="Abrir menu"
@@ -50,6 +50,7 @@ const Header = () => {
             }`}
           >
             <div className="flex flex-col flex-grow gap-5 font-semibold">
+              <X className={`lg:hidden absolute right-5 top-5`} />
               <li>
                 <a href="#init">Início</a>
               </li>

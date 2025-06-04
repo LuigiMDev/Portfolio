@@ -5,7 +5,7 @@ import { Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="init" className="flex flex-col lg:flex-row lg:justify-between w-full h-[100dvh] items-center px-10 max-w-[1410px] gap-y-6 pb-5 pt-25 lg:pt-5">
+    <section id="init" className="flex flex-col lg:flex-row lg:justify-between w-full min-h-[100dvh] items-center px-10 max-w-[1410px] gap-y-6 pb-5 pt-25 lg:pt-5">
       <div className="text-white max-w-[500px] flex flex-col items-center lg:items-start">
         <div>
           <span className="text-lg opacity-70 text-center lg:text-left block">
@@ -21,6 +21,14 @@ const HeroSection = () => {
           MySQL, C# e versionamento de código com Git/GitHub.
         </p>
         <ButtonGlow />
+        <div className="flex gap-3 mt-5 hover:shadow-[0]">
+          <a className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all">
+            <Linkedin />
+          </a>
+          <a className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all">
+            <Github />
+          </a>
+        </div>
         
       </div>
       <div className="rounded-full before:rounded-full after:rounded-full after:blur-lg aspect-square relative w-full lg:w-[455px] max-w-[320px] lg:max-w-[455px] drop-shadow-[0_0_60px_rgba(147,51,234,0.3)]">
