@@ -36,9 +36,14 @@ const Form = () => {
       });
       toast.success("E-mail enviado com sucesso!");
       reset();
-    } catch (err: any) {
-      console.log("FAILED...", err.text);
-      toast.error("Ocorreu um erro ao enviar o e-mail!");
+    } catch (err: unknown) {
+      if(err instanceof Error) {
+        console.log("FAILED...", err.message);
+        toast.error("Ocorreu um erro ao enviar o e-mail!");
+      } else {
+        console.log("FAILED...", err);
+        toast.error("Ocorreu um erro ao enviar o e-mail!");
+      }
     }
 
     setIsLoading(false);
