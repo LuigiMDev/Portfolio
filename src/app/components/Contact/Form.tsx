@@ -25,7 +25,6 @@ const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
