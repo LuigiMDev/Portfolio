@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const dmSans = DM_Sans({subsets: ["latin"]})
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost:3000"
+
 export const metadata: Metadata = {
   title: "Portfólio - Luigi Matheus",
   description:
@@ -23,12 +25,14 @@ export const metadata: Metadata = {
     "Backend",
     "Programador"
   ],
-  authors: [{ name: "Luigi Matheus" }],
+  authors: [{ name: "Luigi Matheus", url: baseURL }],
   creator: "Luigi Matheus",
+  metadataBase: new URL(baseURL),
   openGraph: {
     title: "Portfólio - Luigi Matheus",
     description:
       "Veja os projetos e habilidades de Luigi Matheus, desenvolvedor fullstack com experiência em aplicações web modernas.",
+    url: "https://luigimdev.vercel.app",
     siteName: "Portfólio Luigi Matheus",
     images: [
       {
@@ -58,6 +62,7 @@ export const metadata: Metadata = {
   },
   category: "technology",
 };
+
 
 
 export default function RootLayout({

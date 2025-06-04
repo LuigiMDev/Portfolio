@@ -25,10 +25,10 @@ const HeroSection = () => {
         </p>
         <ButtonGlow />
         <div className="flex gap-3 mt-5 hover:shadow-[0]">
-          <a className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all" aria-label="Linkedin do Luigi">
+          <a href="https://www.linkedin.com/in/luigimdev/" className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all" aria-label="Linkedin do Luigi">
             <Linkedin />
           </a>
-          <a className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all" aria-label="Github do Luigi">
+          <a href="https://github.com/luigimdev" className="p-3 bg-slate-800 rounded-full relative before:absolute before:-z-[1] before:inset-1 before:bg-primary hover:before:blur-lg before:rounded-full cursor-pointer before:transition-all" aria-label="Github do Luigi">
             <Github />
           </a>
         </div>

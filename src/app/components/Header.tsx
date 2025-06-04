@@ -44,12 +44,12 @@ const Header = () => {
           onClick={() => setMenuClicked((prev) => !prev)}
         >
           <AppWindowMac className="cursor-pointer" />
-          <ul
+          <div
             className={`flex absolute bg-slate-800 right-0 top-0 z-20 lg:clip-circle-initial group-hover:lg:clip-circle-final transition-all duration-500 rounded-lg h-72 w-64 flex-col p-5 ${
               menuClicked ? "clip-circle-final" : "clip-circle-initial"
             }`}
           >
-            <div className="flex flex-col flex-grow gap-5 font-semibold">
+            <ul className="flex flex-col flex-grow gap-5 font-semibold">
               <X className={`lg:hidden absolute right-5 top-5 cursor-pointer`} />
               <li>
                 <a href="#init">Início</a>
@@ -66,13 +66,13 @@ const Header = () => {
               <li>
                 <a href="#contact">Contato</a>
               </li>
-            </div>
+            </ul>
             <div className="flex gap-x-4">
               <div className="p-2 bg-red-500 rounded-full" />
               <div className="p-2 bg-yellow-400 rounded-full" />
               <div className="p-2 bg-green-500 rounded-full" />
             </div>
-          </ul>
+          </div>
         </div>
       </nav>
     </header>

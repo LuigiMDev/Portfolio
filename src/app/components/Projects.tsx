@@ -37,11 +37,11 @@ const Projects = async () => {
                   <h3 className="text-2xl font-semibold mb-3">
                     {project.name}
                   </h3>
-                  <ul className="flex gap-2 mb-4 flex-wrap pointer-events-none ">
+                  <ul className="flex gap-2 mb-4 flex-wrap ">
                     {project.topics?.map((topic) => (
                       <li
                         key={topic}
-                        className="p-1 bg-purple-600 rounded-full text-sm font-semibold"
+                        className="p-1 bg-purple-700 rounded-full text-sm font-semibold"
                       >
                         {topic}
                       </li>
@@ -53,7 +53,7 @@ const Projects = async () => {
                   <a
                     href={project.homepage}
                     target="_blank"
-                    className="bg-purple-600/50 hover:bg-purple-600 transition-all block p-1 rounded-xl"
+                    className="bg-purple-700/70 hover:bg-purple-700  transition-all block p-1 rounded-xl"
                     aria-label="Link do projeto"
                   >
                     <ExternalLink />
@@ -62,7 +62,7 @@ const Projects = async () => {
                     <a
                       href={project.github}
                       target="_blank"
-                      className="bg-purple-600/50 hover:bg-purple-600 transition-all block p-1 rounded-xl"
+                      className="bg-purple-700/70 hover:bg-purple-700 transition-all block p-1 rounded-xl"
                       aria-label="Link do Github do projeto"
                     >
                       <Github />

@@ -94,7 +94,7 @@ const Form = () => {
       </div>
       <button
         type="submit"
-        className="w-full cursor-pointer flex items-center justify-center gap-2 relative z-10 bg-purple-600 px-3 py-2 text-xl font-semibold rounded-xl hover:shadow-[0_0_30px_rgba(147,51,234,0.3)] transition-all duration-200"
+        className="w-full cursor-pointer flex items-center justify-center gap-2 relative z-10 bg-purple-700 px-3 py-2 text-xl font-semibold rounded-xl hover:shadow-[0_0_30px_rgba(147,51,234,0.3)] transition-all duration-200"
       >
         <Send /> Enviar
       </button>
