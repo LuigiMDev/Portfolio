@@ -5,7 +5,10 @@ import Form from "./Contact/Form";
 
 const Contact = () => {
   return (
-    <section className="w-fit mx-auto px-3 lg:px-10 mb-10">
+    <section
+      id="contact"
+      className="w-fit mx-auto px-3 lg:px-10 mb-10 scroll-mt-20"
+    >
       <h2 className="text-4xl md:text-5xl font-semibold mb-5 text-center">
         Entre em <span className="text-purple-500">contato</span>
       </h2>
@@ -53,6 +56,7 @@ const Contact = () => {
             <p>Se conecte comigo!</p>
             <div className="flex gap-3">
               <a
+                aria-label="Linkedin do Luigi"
                 href="https://www.linkedin.com/in/luigimdev/"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -60,6 +64,7 @@ const Contact = () => {
                 <Linkedin />
               </a>
               <a
+                aria-label="Github do Luigi"
                 href="https://github.com/luigimdev"
                 target="_blank"
                 rel="noreferrer noopener"
