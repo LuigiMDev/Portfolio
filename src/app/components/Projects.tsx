@@ -11,7 +11,7 @@ const Projects = async () => {
         <h2 className="text-4xl md:text-5xl font-semibold mb-5 text-center">
           Projetos em <span className="text-purple-500">Destaque</span>
         </h2>
-        <p className="mb-10 text-lg text-center max-w-[1000px] mx-auto">
+        <p className="mb-10 text-lg text-center max-w-5xl mx-auto">
           Confira alguns dos meus principais projetos, onde aplico na prática as
           tecnologias que domino para criar soluções modernas, funcionais e bem
           estruturadas.
