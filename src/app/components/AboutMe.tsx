@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="relative text-white overflow-hidden mb-10">
+    <section id="about-me" className="relative text-white mb-10 scroll-mt-20">
       <div className="h-12 bg-gradient-to-b from-transparent to-[#0d0d1d] absolute inset-x-0 top-0" />
       <div className="h-12 bg-gradient-to-b to-transparent from-[#0d0d1d] absolute inset-x-0 bottom-0" />
       <div className="absolute top-12 left-0 right-0 bottom-12 bg-gradient-to-b from-[#0d0d1d] via-[#111122] to-[#0d0d1d]"></div>

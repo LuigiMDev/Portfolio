@@ -6,7 +6,7 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = async () => {
   const projects = await getProjects();
   return (
-    <section id="projects" className="px-3 lg:px-10 mb-10">
+    <section id="projects" className="px-3 lg:px-10 mb-10 scroll-mt-20">
       <div className="max-w-[1410px] bg-white/5 backdrop-blur-sm border border-white/10 px-4 md:px-10 py-5 rounded-xl">
         <h2 className="text-5xl font-semibold mb-5 text-center">
           Projetos em <span className="text-purple-500">Destaque</span>
@@ -29,7 +29,7 @@ const Projects = async () => {
                   width={300}
                   height={220}
                   alt={project.name}
-                  className="mx-auto w-full mb-2 aspect-video object-cover  hover:scale-110 transition-all duration-500 rounded-md"
+                  className="mx-auto w-full mb-2 aspect-video object-cover  hover:scale-105 transition-all duration-500 rounded-md"
                 />
               </div>
               <div className="flex flex-col justify-between flex-grow">

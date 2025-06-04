@@ -45,12 +45,12 @@ const Header = () => {
         >
           <AppWindowMac className="cursor-pointer" />
           <ul
-            className={`flex absolute bg-slate-800 right-0 top-0 z-20 lg:clip-circle-initial group-hover:lg:clip-circle-final transition-all duration-500 rounded-lg h-64 w-64 flex-col p-5 ${
+            className={`flex absolute bg-slate-800 right-0 top-0 z-20 lg:clip-circle-initial group-hover:lg:clip-circle-final transition-all duration-500 rounded-lg h-72 w-64 flex-col p-5 ${
               menuClicked ? "clip-circle-final" : "clip-circle-initial"
             }`}
           >
             <div className="flex flex-col flex-grow gap-5 font-semibold">
-              <X className={`lg:hidden absolute right-5 top-5`} />
+              <X className={`lg:hidden absolute right-5 top-5 cursor-pointer`} />
               <li>
                 <a href="#init">Início</a>
               </li>
@@ -59,6 +59,9 @@ const Header = () => {
               </li>
               <li>
                 <a href="#projects">Projetos</a>
+              </li>
+              <li>
+                <a href="#skills">Habilidades</a>
               </li>
               <li>
                 <a href="#contact">Contato</a>
