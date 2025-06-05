@@ -1,5 +1,5 @@
 import AboutMe from "./components/AboutMe";
-import BackgroundVideo from "./components/Hero/BackgroundVideo";
+import BackgroundVideo from "./components/BackgroundVideo";
 import Header from "./components/Header";
 import HeroSection from "./components/Hero/HeroSection";
 import Projects from "./components/Projects";
