@@ -3,7 +3,9 @@ import { Project } from "../types/Project";
 
 const verifyHasVideo = async (repoName: string) => {
   const res = await fetch(
-    `https://raw.githubusercontent.com/luigimdev/${repoName}/main/portfolio/video.gif`
+    `https://raw.githubusercontent.com/luigimdev/${repoName}/main/portfolio/video.gif`, {
+      next: {revalidate: 60}
+    }
   );
 
   return res.ok;
@@ -17,6 +19,7 @@ export const getProjects = async () => {
       Accept: "application/vnd.github.mercy-preview+json",
       Authorization: `token ${token}`,
     },
+    next: {revalidate: 60}
   });
 
   if (!res.ok) {
