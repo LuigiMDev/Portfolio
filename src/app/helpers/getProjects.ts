@@ -9,10 +9,13 @@ const verifyHasVideo = async (repoName: string) => {
   return res.ok;
 };
 
+const token = process.env.GITHUB_TOKEN;
+
 export const getProjects = async () => {
-  const res = await fetch("https://api.github.com/users/luigimdev/repos", {
+  const res = await fetch("https://api.github.com/user/repos?per_page=100", {
     headers: {
       Accept: "application/vnd.github.mercy-preview+json",
+      Authorization: `token ${token}`,
     },
   });
 
@@ -24,15 +27,11 @@ export const getProjects = async () => {
   const data = await res.json();
 
   const projectsData: Project[] = data
-  .filter((project: Project) =>
-    project.topics?.includes("portfolio")
-  )
-  .map((project: Project) => (
-    {
+    .filter((project: Project) => project.topics?.includes("portfolio"))
+    .map((project: Project) => ({
       ...project,
-      topics: project.topics?.filter((topic) => topic !== "portfolio")
-    }
-  ))
+      topics: project.topics?.filter((topic) => topic !== "portfolio"),
+    }));
 
   const projects = await Promise.all(
     projectsData.map(async (project) => {
@@ -43,19 +42,24 @@ export const getProjects = async () => {
         name: project.name,
         description: project.description,
         homepage: project.homepage,
-        github: `https://github.com/LuigiMDev/${project.name}`,
+        github: project.private
+          ? undefined
+          : `https://github.com/LuigiMDev/${project.name}`,
         topics: project.topics || [],
         media: hasVideo
           ? `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/video.gif`
           : `https://raw.githubusercontent.com/luigimdev/${project.name}/main/portfolio/thumb.png`,
-        updated_at: project.updated_at
+        updated_at: project.updated_at,
       };
     })
   );
 
-  const allProjects = [...projects, ...manualProjects]
+  const allProjects = [...projects, ...manualProjects];
 
-  allProjects.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+  allProjects.sort(
+    (a, b) =>
+      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  );
 
   return allProjects;
 };
