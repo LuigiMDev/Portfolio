@@ -3,6 +3,7 @@ export type Project = {
   name: string;
   description: string;
   homepage: string;
+  private: boolean
   github?: string
   topics?: string[];
   media: string;
